@@ -1,5 +1,5 @@
 #!/usr/bin/perl -s
-$f=$d?-1:1;$D=pack('C*'.33..86);$p=shift;
+$f=$d?-1:1;$D=pack('C*',33..86);$p=shift;
 $p=~y/a-z/A-Z/;$U='$D=~s/(.*)U$/U$1/;
 $D=~s/U(.)/$1U/;';($V=$U)=~s/U/V/g;
 $p=~s/[A-Z]/$k=ord($&)-64,&e/eg;$k=0;
