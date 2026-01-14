@@ -58,9 +58,9 @@ sub pivot {
 }
 
 sub execute {
-    # do a triple cut?
+    # Step 1 & 2: Move Joker A (U) down 1, Joker B (V) down 2
     eval "$U$V$V";
-    # move the joker if UV are next to each other
+    # Step 3: Triple cut - swap cards before first joker with cards after second joker
     $deck =~ s/(.*)([UV].*[UV])(.*)/$3$2$1/;
     &pivot(&getCardinalValueAt(53)); #pivot at the end of the deck
     my $current;
